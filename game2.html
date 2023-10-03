@@ -5,35 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflective</title>
     <link rel="stylesheet" href="assets/css/main.css"> <!-- You may need to adjust the CSS path -->
+
+    <style>
+        .image.main video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Reflective</h1>
-    </header>
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
 
-    <!-- Game Description -->
-    <section id="game-description">
-        <h2>About the Game</h2>
-        <p>
-            "Billionaires" is an exciting space adventure game that takes you on a journey through the cosmos.
-            You play as a daring astronaut exploring the universe, collecting rare resources, and building your
-            intergalactic fortune. Encounter alien civilizations, navigate treacherous asteroid fields, and
-            upgrade your spaceship to become the ultimate billionaire in the galaxy.
-        </p>
-    </section>
+        <!-- Header -->
+        <header id="header">
+            <h1>Reflective</h1>
+        </header>
 
-    <!-- Game Image -->
-    <section id="game-image">
-        <img src="images/billionaires_game.jpg" alt="Billionaires Game Screenshot">
-    </section>
+        <!-- Main Content -->
+        <div id="main">
 
-    <!-- Back to Portfolio -->
-    <section id="back-to-portfolio">
-        <a href="index.html">Back to Portfolio</a>
-    </section>
+            <!-- Game Description -->
+            <article class="post">
+                <header class="major">
+                    <h2>Post Mortem</h2>
+                </header>
+                <p>
+                    "Reflective" is a unique game that combines elements of air and water, where players control a bird in 
+                    the air and a fish underwater. The primary objective is to maintain food levels for both the bird and
+                    the fish while contending with enemy birds and fish. One of the major challenges was managing the game
+                    state transitions between the bird and fish. Ensuring a seamless transition while keeping track of
+                    variables like food levels and enemy behavior required careful planning. Implementing the core "reflective"
+                    mechanic, where the player could switch between air and water, involved intricate coding and debugging.
+                    Tracking player velocity and direction was essential for smooth state transitions. To solve the transition
+                    between the bird and the fish, a robust state management system was developed. It took into account player
+                    input, velocity, and collision detection. Detecting when the player crossed the air-water boundary helped 
+                    control the reflective mechanic.
+                </p>
+            </article>
+
+            <!-- Game Image -->
+            <section class="post">
+                <header class="major">
+                    <h2>Game Play</h2>
+                </header>
+                <p>
+                    I mentioned the state switching between the bird and the fish, but there was more going on then just simply
+                    crossing the line sometimes. When the player is a bird, it would only switch into a fish if it's velocity
+                    was almost 0. The reason for this was because the bird can actually dive by pressing return and eat a enemy fish
+                    in order to remove competition (and your food bar fills up!). The game progressively gets harder as time goes by
+                    because the fish and bird require more food to survive.
+                </p>
+                <video controls width="1280" height="720" class="image main">
+                    <source src="ThirtySecondClip.mp4" type="video/mp4">
+                </video>
+            </section>
+
+            <!-- Back to Portfolio -->
+            <section class="post">
+                <a href="index.html" class="button">Back to Portfolio</a>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
-
