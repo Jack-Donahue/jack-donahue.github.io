@@ -7,9 +7,33 @@
     <link rel="stylesheet" href="assets/css/main.css"> <!-- You may need to adjust the CSS path -->
 
     <style>
-        .image.main video {
+        /* Style for video container */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        /* Style for individual video */
+        .video {
+            flex: 0 1 calc(50% - 20px); /* Adjust width as needed */
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .video video {
             width: 100%;
             height: auto;
+            display: block;
+        }
+
+        /* Style for video description */
+        .video-description {
+            margin-top: 10px;
+            text-align: center;
         }
     </style>
 </head>
@@ -29,24 +53,47 @@
             <!-- Game Description -->
             <article class="post">
                 <header class="major">
-                    <h2>Post Mortem</h2>
+                    <h2>Check it out in the store!</h2>
                 </header>
                 <p>
-                    <!-- Add a description of the game or the website or something -->
+                    PUT STEAM LINK HERE WHEN IT GETS PUBLISHED
+                    
+                    Go! Save the Queen is an escort tower defense game with a buggy theme. Protect the queen from enemy insects
+                    with your own ant units. Each unit and enemy has their own unique skillset so make sure to place them down
+                    strategically. My role in this game focused on the enemies and the VFX. The following videos will help
+                    demonstrate how the game works and I will point out the specific features that I created.
                 </p>
             </article>
 
-            <!-- Game Image -->
+            <!-- Video Gallery -->
             <section class="post">
                 <header class="major">
-                    <h2>Game Play</h2>
+                    <h2>Video Gallery</h2>
                 </header>
-                <p>
-                    <!-- Add a description of the game or the website or something -->
-                </p>
-                <video controls width="1280" height="720" class="image main">
-                    <source src="ThirtySecondClip.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <div class="video">
+                        <video controls>
+                            <source src="video1.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-description">You can see the swarm of enemies barreling towards the queen (Corgi) and the units that
+                            are place in their path to protect her. There are small VFX that are played when an enemy dies, does a special ability,
+                            or is hit by a certain buff or debuff. There are multiple enemies on display here such as the bee, stinkbug, flea, and
+                            praying mantis. The bee doesn't attack, but instead drops honey on unsuspecting players to slow their movement or attack speed.
+                            The stinkbug charges towards the queen and drops a gas cloud that damages the queen over time and decreases visibility. Lastly,
+                            the flea has a very high movement speed and little health and tries to attach itself to the queen, damaging her every second it
+                            can stay attached.
+                        </div>
+                    </div>
+                    <div class="video">
+                        <video controls>
+                            <source src="video2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-description">These are all managed by a singleton effects manager that can easily be called. The effects are
+                             randomized in terms of size, shape rotation, burst, and much more to insure that they don't look the exact same every time.
+                        </div>
+                    </div>
+                    <!-- Add more video elements as needed -->
+                </div>
             </section>
 
             <!-- Back to Portfolio -->
